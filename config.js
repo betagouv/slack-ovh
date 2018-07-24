@@ -61,6 +61,10 @@ const config = {
       description: "Liste des redirections sur contact@emjpm.beta.gouv.fr"
     },
     {
+      id: "support@emjpm.beta.gouv.fr",
+      description: "Mail utilisé pour le support emjpm (créations de comptes, relances, etc.)"
+    },
+    {
       id: "contact@lebontuteur.beta.gouv.fr",
       description: "Liste des redirections sur contact@lebontuteur.beta.gouv.fr"
     },
