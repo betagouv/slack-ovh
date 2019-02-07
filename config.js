@@ -134,6 +134,10 @@ const config = {
     {
       id: "recrutement@beta.gouv.fr",
       description: "Tous les recrutements de beta.gouv.fr"
+    },
+    {
+      id: "contact@mon-entreprise.beta.gouv.fr",
+      description: "Toute demande entrante pour mon-entreprise.fr"
     }
   ]
 }
