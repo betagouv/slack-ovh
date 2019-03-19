@@ -150,6 +150,11 @@ const config = {
       realMailingList: true
     },
     {
+      id: "e-controle",
+      description: "Liste pour les membres de la SE e-controle",
+      realMailingList: true
+    },
+    {
       id: "incubateur",
       description: "Tous les membres ayant un contrat en cours sur beta.gouv.fr/communaute",
       realMailingList: true
