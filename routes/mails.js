@@ -8,9 +8,9 @@ const messages = require("../lib/messages");
 
 const helpMessage = `Commandes disponibles:
   \t- \`/emails list\`\t\tensemble des listes de diffusions existantes
-  \t- \`/emails list email_de_la_liste@domain.com\`\t\tpersonnes inscrites dans la liste email_de_la_liste@domain.com
-  \t- \`/emails join email_de_la_liste@domain.com email_a_ajouter@domain.com\`\tinscrire email_a_ajouter@domain.com à la liste email_de_la_liste@domain.com
-  \t- \`/emails leave email_de_la_liste@domain.com email_a_ajouter@domain.com\`\tenlever email_a_ajouter@domain.com de la liste email_de_la_liste@domain.com
+  \t- \`/emails list id_de_la_liste\`\t\tpersonnes inscrites dans la liste email_de_la_liste@domain.com
+  \t- \`/emails join id_de_la_liste email_a_ajouter@domain.com\`\tinscrire email_a_ajouter@domain.com à la liste email_de_la_liste@domain.com
+  \t- \`/emails leave id_de_la_liste email_a_ajouter@domain.com\`\tenlever email_a_ajouter@domain.com de la liste email_de_la_liste@domain.com
 
   Vous pouvez ajoutez votre liste ici 👉 https://github.com/betagouv/slack-ovh/blob/master/config.js
   Plus d'infos sur https://github.com/betagouv/slack-ovh`;
