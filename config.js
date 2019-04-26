@@ -21,6 +21,10 @@ const config = {
       realMailingList: true
     },
     {
+      id: "codedutravail@beta.gouv.fr",
+      description: "Equipe code du travail numérique"
+    },
+    {
       id: "compta",
       description: "Achats, facturation, refacturation...",
       realMailingList: true
@@ -155,6 +159,11 @@ const config = {
       id: "dinsic",
       description:
         "Rares éléments administratifs nécessitant un lien contractuel (fiches de paie, gestion des ordres de mission…).",
+      realMailingList: true
+    },
+    {
+      id: "e-controle",
+      description: "Liste pour les membres de la SE e-controle",
       realMailingList: true
     },
     {
