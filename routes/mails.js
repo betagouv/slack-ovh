@@ -105,7 +105,7 @@ function findExistingRedirection(email) {
 
     if (!found) {
       throw {
-        message: `Impossible de trouver la redirection de ${mailingList} vers ${email}`
+        message: `Impossible de trouver ${email} dans cette mailing-liste.`
       };
     }
 
@@ -203,7 +203,10 @@ router.post("/", verification, function(req, res, next) {
   }
 
   console.log("Received command: " + req.body.text);
-  let [cmd, mailingList, email] = req.body.text.replace(/\s\s+/g, " ").trim().split(" ")
+  let [cmd, mailingList, email] = req.body.text
+    .replace(/\s\s+/g, " ")
+    .trim()
+    .split(" ");
 
   switch (cmd) {
     case "join":
