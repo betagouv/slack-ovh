@@ -6,16 +6,18 @@ const config = {
     consumerKey: process.env.OVH_CONSUMER_KEY
   },
   domain: process.env.DOMAIN,
-  slackChannel: 'incubateur-secretaria',
+  slackChannel: "incubateur-secretaria",
   lists: [
     {
       id: "alpha",
-      description: "La formation à destination des acteurs de l'innovation du secteur public",
+      description:
+        "La formation à destination des acteurs de l'innovation du secteur public",
       realMailingList: true
     },
     {
       id: "alumni",
-      description: "Tous les membres de la partie \"Alumni\" de beta.gouv.fr/communaute",
+      description:
+        'Tous les membres de la partie "Alumni" de beta.gouv.fr/communaute',
       realMailingList: true
     },
     {
@@ -25,7 +27,8 @@ const config = {
     },
     {
       id: "contact",
-      description: "Toutes demandes entrantes. Stratégie. Pour les membres volontaires",
+      description:
+        "Toutes demandes entrantes. Stratégie. Pour les membres volontaires",
       realMailingList: true
     },
     {
@@ -66,7 +69,7 @@ const config = {
     },
     {
       id: "contact@embauche.beta.gouv.fr",
-      description: "Toute demande entrante pour embauche.beta.gouv.fr",
+      description: "Toute demande entrante pour embauche.beta.gouv.fr"
     },
     {
       id: "contact@emjpm.beta.gouv.fr",
@@ -90,19 +93,21 @@ const config = {
     },
     {
       id: "contact@mobilot.beta.gouv.fr",
-      description: "Toute demande entrante pour Mobilot",
+      description: "Toute demande entrante pour Mobilot"
     },
     {
       id: "contact@mon-entreprise.beta.gouv.fr",
-      description: "Toute demande entrante pour mon-entreprise.fr",
+      description: "Toute demande entrante pour mon-entreprise.fr"
     },
     {
       id: "contact@openacademie.beta.gouv.fr",
-      description: "Des solutions numériques pour l’administration scolaire, openacademie.beta.gouv.fr"
+      description:
+        "Des solutions numériques pour l’administration scolaire, openacademie.beta.gouv.fr"
     },
     {
       id: "contact@place-des-entreprises.beta.gouv.fr",
-      description: "Liste des redirections sur contact@place-des-entreprises.beta.gouv.fr"
+      description:
+        "Liste des redirections sur contact@place-des-entreprises.beta.gouv.fr"
     },
     {
       id: "contact@reso.beta.gouv.fr",
@@ -118,7 +123,8 @@ const config = {
     },
     {
       id: "contact@signaux-faibles.beta.gouv.fr",
-      description: "Liste des redirections sur contact@signaux-faibles.beta.gouv.fr"
+      description:
+        "Liste des redirections sur contact@signaux-faibles.beta.gouv.fr"
     },
     {
       id: "contact@transport.beta.gouv.fr",
@@ -130,15 +136,16 @@ const config = {
     },
     {
       id: "contact@voir-et-localiser.beta.gouv.fr",
-      description: "Toute demande entrante pour Voir et Localiser",
+      description: "Toute demande entrante pour Voir et Localiser"
     },
     {
       id: "contact@workinfrance.beta.gouv.fr",
-      description: "Liste des redirections pour contact et support de l'équipe sur contact@workinfrance.beta.gouv.fr"
+      description:
+        "Liste des redirections pour contact et support de l'équipe sur contact@workinfrance.beta.gouv.fr"
     },
     {
       id: "contact@zam.beta.gouv.fr",
-      description: "Toute demande entrante pour Zam",
+      description: "Toute demande entrante pour Zam"
     },
     {
       id: "deploiement@transport.beta.gouv.fr",
@@ -146,17 +153,20 @@ const config = {
     },
     {
       id: "dinsic",
-      description: "Rares éléments administratifs nécessitant un lien contractuel (fiches de paie, gestion des ordres de mission…).",
+      description:
+        "Rares éléments administratifs nécessitant un lien contractuel (fiches de paie, gestion des ordres de mission…).",
       realMailingList: true
     },
     {
       id: "incubateur",
-      description: "Tous les membres ayant un contrat en cours sur beta.gouv.fr/communaute",
+      description:
+        "Tous les membres ayant un contrat en cours sur beta.gouv.fr/communaute",
       realMailingList: true
     },
     {
       id: "openacademie",
-      description: "Des solutions numériques pour l’administration scolaire, openacademie.beta.gouv.fr",
+      description:
+        "Des solutions numériques pour l’administration scolaire, openacademie.beta.gouv.fr",
       realMailingList: true
     },
     {
@@ -168,6 +178,6 @@ const config = {
       description: "Tous les recrutements de beta.gouv.fr"
     }
   ]
-}
+};
 
-module.exports = config
+module.exports = config;

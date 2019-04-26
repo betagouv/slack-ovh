@@ -97,10 +97,10 @@ function getRedirections(mailingList) {
     .catch(printAndReturnError);
 }
 
-function findExistingRedirection(email, mailingList) {
+function findExistingRedirection(email) {
   return list => {
     const found = list.find(redirection => {
-      return redirection.from === mailingList && redirection.to === email;
+      return redirection.to === email;
     });
 
     if (!found) {
@@ -177,7 +177,9 @@ function leave(res, mailingList, email) {
 
   if (redirections.indexOf(mailingList) >= 0) {
     // Remove redirection
-    leavePromise = getRedirections(mailingList).then(removeRedirection);
+    leavePromise = getRedirections(mailingList)
+      .then(findExistingRedirection(email))
+      .then(removeRedirection);
   } else {
     // Unsubscribe from mailing-list
     leavePromise = ovh.requestPromised(
