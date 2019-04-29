@@ -183,8 +183,9 @@ const config = {
       description: "Les bizdevs du pass culture"
     },
     {
-      id: "recrutement@beta.gouv.fr",
-      description: "Tous les recrutements de beta.gouv.fr"
+      id: "recrutement",
+      description: "Tous les recrutements de beta.gouv.fr",
+      realMailingList: true
     }
   ]
 };
