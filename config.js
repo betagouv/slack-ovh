@@ -88,6 +88,10 @@ const config = {
       description: "Liste des redirections sur contact@fluctuat.beta.gouv.fr"
     },
     {
+      id: "contact@kelrisks.beta.gouv.fr",
+      description: "Liste des redirections sur contact@kelrisks.beta.gouv.fr"
+    },
+    {
       id: "contact@lebontuteur.beta.gouv.fr",
       description: "Liste des redirections sur contact@lebontuteur.beta.gouv.fr"
     },
