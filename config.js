@@ -9,6 +9,12 @@ const config = {
   slackChannel: "incubateur-secretaria",
   lists: [
     {
+      id: "aide-territoires@beta.gouv.fr",
+      description:
+        "Equipe Aides Territoires",
+      realMailingList: true
+    },
+    {
       id: "alpha",
       description:
         "La formation à destination des acteurs de l'innovation du secteur public",
