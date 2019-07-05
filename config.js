@@ -196,7 +196,13 @@ const config = {
       id: "recrutement",
       description: "Tous les recrutements de beta.gouv.fr",
       realMailingList: true
-    }
+    },
+    {
+      id: "andi",
+      description:
+        "Equipe Andi",
+      realMailingList: true
+    },
   ]
 };
 
