@@ -204,9 +204,8 @@ const config = {
       realMailingList: true
     },
     {
-      id: "preindcubation",
-      description:
-        "Echanges sur la préincubation.",
+      id: "preincubation",
+      description: "Échanges sur la préincubation.",
       realMailingList: true
     }
   ]
