@@ -203,6 +203,12 @@ const config = {
         "Equipe Andi",
       realMailingList: true
     },
+    {
+      id: "preindcubation",
+      description:
+        "Echanges sur la préincubation.",
+      realMailingList: true
+    }
   ]
 };
 
