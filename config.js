@@ -27,6 +27,12 @@ const config = {
       realMailingList: true
     },
     {
+      id: "andi",
+      description:
+        "Equipe Andi",
+      realMailingList: true
+    },
+    {
       id: "codedutravail@beta.gouv.fr",
       description: "Equipe code du travail numérique"
     },
@@ -193,16 +199,15 @@ const config = {
       description: "Les bizdevs du pass culture"
     },
     {
-      id: "recrutement",
-      description: "Tous les recrutements de beta.gouv.fr",
+      id: "preincubation",
+      description: "Échanges sur la préincubation.",
       realMailingList: true
     },
     {
-      id: "andi",
-      description:
-        "Equipe Andi",
+      id: "recrutement",
+      description: "Tous les recrutements de beta.gouv.fr",
       realMailingList: true
-    },
+    }
   ]
 };
 
