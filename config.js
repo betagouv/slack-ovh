@@ -189,6 +189,11 @@ const config = {
       realMailingList: true
     },
     {
+      id: "lapins",
+      description: "Liste pour les membres de la Startup d'État Lapins",
+      realMailingList: true
+    },
+    {
       id: "openacademie",
       description:
         "Des solutions numériques pour l’administration scolaire, openacademie.beta.gouv.fr",
