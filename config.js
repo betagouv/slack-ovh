@@ -48,10 +48,6 @@ const config = {
       realMailingList: true
     },
     {
-      id: "contact@action-bidonvilles.beta.gouv.fr",
-      description: "L'équipe de la startup Action bidonvilles"
-    },
-    {
       id: "contact@adock.beta.gouv.fr",
       description: "Liste des redirections sur contact@adock.beta.gouv.fr"
     },
@@ -72,10 +68,6 @@ const config = {
       description: "L'équipe du code du travail numérique"
     },
     {
-      id: "contact@covoiturage.beta.gouv.fr",
-      description: "L'équipe de la preuve de covoiturage"
-    },
-    {
       id: "contact@domifa.beta.gouv.fr",
       description: "L'équipe DomiFa"
     },
@@ -94,14 +86,6 @@ const config = {
     {
       id: "contact@filharmonic.beta.gouv.fr",
       description: "Liste des redirections sur contact@filharmonic.beta.gouv.fr"
-    },
-    {
-      id: "contact@fluctuat.beta.gouv.fr",
-      description: "Liste des redirections sur contact@fluctuat.beta.gouv.fr"
-    },
-    {
-      id: "contact@kelrisks.beta.gouv.fr",
-      description: "Liste des redirections sur contact@kelrisks.beta.gouv.fr"
     },
     {
       id: "contact@lebontuteur.beta.gouv.fr",
@@ -140,11 +124,6 @@ const config = {
     {
       id: "contact@signalement.beta.gouv.fr",
       description: "Liste des redirections sur contact@signalement.beta.gouv.fr"
-    },
-    {
-      id: "contact@signaux-faibles.beta.gouv.fr",
-      description:
-        "Liste des redirections sur contact@signaux-faibles.beta.gouv.fr"
     },
     {
       id: "contact@transport.beta.gouv.fr",
