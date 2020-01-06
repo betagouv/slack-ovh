@@ -33,6 +33,12 @@ const config = {
       realMailingList: true
     },
     {
+      id: "cartobio",
+      description:
+        "Equipe CartoBio",
+      realMailingList: true
+    },
+    {
       id: "codedutravail@beta.gouv.fr",
       description: "Equipe code du travail numérique"
     },
