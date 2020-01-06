@@ -151,6 +151,10 @@ const config = {
       description: "Liste pour les bizdev transport.data.gouv.fr "
     },
     {
+      id: "equipe@cartobio.beta.gouv.fr",
+      description: "Liste pour l'equipe cartobio.beta.gouv.fr "
+    },
+    {
       id: "dinsic",
       description:
         "Rares éléments administratifs nécessitant un lien contractuel (fiches de paie, gestion des ordres de mission…).",
