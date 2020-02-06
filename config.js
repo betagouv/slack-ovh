@@ -82,6 +82,10 @@ const config = {
       description: "L'équipe DossierSCO"
     },
     {
+      id: "contact@ecolab.beta.gouv.fr",
+      description: "L'équipe Ecolab"
+    },
+    {
       id: "contact@embauche.beta.gouv.fr",
       description: "Toute demande entrante pour embauche.beta.gouv.fr"
     },
