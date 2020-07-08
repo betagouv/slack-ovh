@@ -54,6 +54,10 @@ const config = {
       realMailingList: true
     },
     {
+      id: "contact@acceslibre.beta.gouv.fr",
+      description: "L'équipe acceslibre"
+    },
+    {
       id: "contact@adock.beta.gouv.fr",
       description: "Liste des redirections sur contact@adock.beta.gouv.fr"
     },
