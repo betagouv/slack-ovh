@@ -193,6 +193,11 @@ const config = {
       description: "Les bizdevs du pass culture"
     },
     {
+      id: 'partenaires',
+      description: 'Contacts des incubateurs partenaires de la communauté beta.gouv.fr',
+      realMailingList: true
+    },
+    {
       id: "preincubation",
       description: "Échanges sur la préincubation.",
       realMailingList: true
