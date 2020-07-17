@@ -9,7 +9,7 @@ const config = {
   slackChannel: "incubateur-secretaria",
   lists: [
     {
-      id: "aide-territoires@beta.gouv.fr",
+      id: "aide-territoires",
       description:
         "Equipe Aides Territoires",
       realMailingList: true
@@ -17,13 +17,13 @@ const config = {
     {
       id: "alpha",
       description:
-        "La formation à destination des acteurs de l'innovation du secteur public",
+        "Prises de contact externes pour la formation à destination des acteurs de l'innovation du secteur public",
       realMailingList: true
     },
     {
       id: "alumni",
       description:
-        'Tous les membres de la partie "Alumni" de beta.gouv.fr/communaute',
+        'Tous les membres de la partie "Alumni" de beta.gouv.fr/communaute, ajoutés automatiquement par le bot',
       realMailingList: true
     },
     {
@@ -39,8 +39,9 @@ const config = {
       realMailingList: true
     },
     {
-      id: "codedutravail@beta.gouv.fr",
-      description: "Equipe code du travail numérique"
+      id: "codedutravail",
+      description: "Equipe code du travail numérique",
+      realMailingList: true
     },
     {
       id: "compta",
@@ -50,20 +51,12 @@ const config = {
     {
       id: "contact",
       description:
-        "Toutes demandes entrantes. Stratégie. Pour les membres volontaires",
+        "Toutes demandes entrantes à la communauté beta.gouv.fr.",
       realMailingList: true
-    },
-    {
-      id: "contact@adock.beta.gouv.fr",
-      description: "Liste des redirections sur contact@adock.beta.gouv.fr"
     },
     {
       id: "contact@aplus.beta.gouv.fr",
       description: "Liste des redirections sur contact@aplus.beta.gouv.fr"
-    },
-    {
-      id: "contact@beta.gouv.fr",
-      description: "Liste des contacts sur beta.gouv.fr"
     },
     {
       id: "contact@civils-de-la-defense.beta.gouv.fr",
@@ -78,10 +71,6 @@ const config = {
       description: "L'équipe DomiFa"
     },
     {
-      id: "contact@dossiersco.beta.gouv.fr",
-      description: "L'équipe DossierSCO"
-    },
-    {
       id: "contact@ecolab.beta.gouv.fr",
       description: "L'équipe Ecolab"
     },
@@ -92,18 +81,6 @@ const config = {
     {
       id: "contact@emjpm.beta.gouv.fr",
       description: "Liste des redirections sur contact@emjpm.beta.gouv.fr"
-    },
-    {
-      id: "contact@filharmonic.beta.gouv.fr",
-      description: "Liste des redirections sur contact@filharmonic.beta.gouv.fr"
-    },
-    {
-      id: "contact@lebontuteur.beta.gouv.fr",
-      description: "Liste des redirections sur contact@lebontuteur.beta.gouv.fr"
-    },
-    {
-      id: "contact@locatio.beta.gouv.fr",
-      description: "Liste des redirections sur contact@locatio.beta.gouv.fr"
     },
     {
       id: "contact@mobilot.beta.gouv.fr",
@@ -161,7 +138,7 @@ const config = {
       description: "Liste pour les bizdev transport.data.gouv.fr "
     },
     {
-      id: "dinsic",
+      id: "dinum",
       description:
         "Rares éléments administratifs nécessitant un lien contractuel (fiches de paie, gestion des ordres de mission…).",
       realMailingList: true
@@ -189,13 +166,13 @@ const config = {
       realMailingList: true
     },
     {
-      id: "passculture-bizdev@beta.gouv.fr",
-      description: "Les bizdevs du pass culture"
-    },
-    {
       id: 'partenaires',
       description: 'Contacts des incubateurs partenaires de la communauté beta.gouv.fr',
       realMailingList: true
+    },
+    {
+      id: "passculture-bizdev@beta.gouv.fr",
+      description: "Les bizdevs du pass culture"
     },
     {
       id: "preincubation",
