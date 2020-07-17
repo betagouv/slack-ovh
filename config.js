@@ -21,7 +21,7 @@ const config = {
       realMailingList: true
     },
     {
-      id: "aide-territoires",
+      id: "aides-territoires",
       description:
         "Equipe Aides Territoires",
       realMailingList: true
@@ -165,6 +165,12 @@ const config = {
     {
       id: "deploiement@transport.beta.gouv.fr",
       description: "Liste pour les bizdev transport.data.gouv.fr "
+    },   
+    {
+      id: "design",
+      description:
+        "Equipe de designers transverses",
+      realMailingList: true
     },
     {
       id: "dinum",
@@ -180,6 +186,11 @@ const config = {
     {
       id: "fast",
       description: "Demandes entrantes des appels à candidature FAST",
+      realMailingList: true
+    },
+    {
+      id: "friches",
+      description: "Equipe friches",
       realMailingList: true
     },
     {
@@ -222,12 +233,14 @@ const config = {
       realMailingList: true
     },
     {
-      id: "passculture-bizdev@beta.gouv.fr",
-      description: "Les bizdevs du pass culture"
+      id: "passculture-bizdev",
+      description: "Les bizdevs du pass culture",
+      realMailingList: true
     },
     {
-      id: "passculture-dev@beta.gouv.fr",
-      description: "Les devs du pass culture"
+      id: "passculture-dev",
+      description: "Les devs du pass culture",
+      realMailingList: true
     },
     {
       id: "peps",

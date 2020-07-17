@@ -41,7 +41,7 @@ function fillDescription(id) {
 }
 
 function buildLongDescription(list) {
-  return list.reduce((acc, item) => {
+  return list.sort().reduce((acc, item) => {
     return acc + `- ${fillDescription(item)}\n`;
   }, "Listes de diffusions existantes:\n");
 }
