@@ -292,7 +292,7 @@ const config = {
       description:
         "Equipe Solidarite FDE",
       realMailingList: true
-    }
+    },
     {
       id: "egalim",
       description:
