@@ -293,6 +293,12 @@ const config = {
         "Equipe Solidarite FDE",
       realMailingList: true
     }
+    {
+      id: "egalim",
+      description:
+        "Equipe Egalim",
+      realMailingList: true
+    }
   ]
 };
 
