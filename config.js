@@ -296,8 +296,7 @@ const config = {
     {
       id: "contact@egalim.beta.gouv.fr",
       description:
-        "Equipe Egalim",
-      realMailingList: true
+        "Equipe Egalim"
     }
   ]
 };
