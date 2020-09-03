@@ -104,6 +104,11 @@ const config = {
       description: "L'équipe Ecolab"
     },
     {
+      id: "contact@egalim.beta.gouv.fr",
+      description:
+        "Equipe Egalim"
+    },
+    {
       id: "contact@embauche.beta.gouv.fr",
       description: "Toute demande entrante pour embauche.beta.gouv.fr"
     },
@@ -292,11 +297,6 @@ const config = {
       description:
         "Equipe Solidarite FDE",
       realMailingList: true
-    },
-    {
-      id: "contact@egalim.beta.gouv.fr",
-      description:
-        "Equipe Egalim"
     }
   ]
 };
