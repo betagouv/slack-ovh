@@ -194,6 +194,11 @@ const config = {
       realMailingList: true
     },
     {
+      id: "france-transition",
+      description: "Equipe France Transition",
+      realMailingList: true
+    },
+    {
       id: "friches",
       description: "Equipe friches",
       realMailingList: true
