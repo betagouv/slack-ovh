@@ -298,6 +298,12 @@ const config = {
       realMailingList: true
     },
     {
+      id: "protege-toit",
+      description:
+        "Equipe Protege ToiT",
+      realMailingList: true
+    },
+    {
       id: "solidarite-fde",
       description:
         "Equipe Solidarite FDE",
