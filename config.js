@@ -189,6 +189,11 @@ const config = {
       realMailingList: true
     },
     {
+      id: "fabrique-chatbots",
+      description: "Liste pour les membres de la SE Fabrique à chatbots",
+      realMailingList: true
+    },    
+    {
       id: "fast",
       description: "Demandes entrantes des appels à candidature FAST",
       realMailingList: true
