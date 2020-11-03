@@ -286,6 +286,11 @@ const config = {
       realMailingList: true
     },
     {
+      id: "regles",
+      description: "L'équipe #domaine-regles",
+      realMailingList: true
+    },
+    {
       id: "secretariat",
       description:
         "Equipe PEPS",
