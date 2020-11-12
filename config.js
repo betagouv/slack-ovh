@@ -125,11 +125,6 @@ const config = {
       description: "Adresse de support pour les demande des usager de mon-entreprise.fr"
     },
     {
-      id: "equipe@mon-entreprise.beta.gouv.fr",
-      description:
-        "Equipe mon-entreprise, pour les discussions avec les partenaires"
-    },
-    {
       id: "contact@openacademie.beta.gouv.fr",
       description:
         "Des solutions numériques pour l’administration scolaire, openacademie.beta.gouv.fr"
@@ -187,6 +182,11 @@ const config = {
       description:
         "Rares éléments administratifs nécessitant un lien contractuel (fiches de paie, gestion des ordres de mission…).",
       realMailingList: true
+    },
+    {
+      id: "equipe@mon-entreprise.beta.gouv.fr",
+      description:
+        "Equipe mon-entreprise, pour les discussions avec les partenaires"
     },
     {
       id: "e-controle",
