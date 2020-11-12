@@ -122,7 +122,12 @@ const config = {
     },
     {
       id: "contact@mon-entreprise.beta.gouv.fr",
-      description: "Toute demande entrante pour mon-entreprise.fr"
+      description: "Adresse de support pour les demande des usager de mon-entreprise.fr"
+    },
+    {
+      id: "equipe@mon-entreprise.beta.gouv.fr",
+      description:
+        "Equipe mon-entreprise, pour les discussions avec les partenaires"
     },
     {
       id: "contact@openacademie.beta.gouv.fr",
