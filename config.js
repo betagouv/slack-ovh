@@ -184,14 +184,14 @@ const config = {
       realMailingList: true
     },
     {
-      id: "equipe@mon-entreprise.beta.gouv.fr",
-      description:
-        "Equipe mon-entreprise, pour les discussions avec les partenaires"
-    },
-    {
       id: "e-controle",
       description: "Liste pour les membres de la SE e-controle",
       realMailingList: true
+    },
+    {
+      id: "equipe@mon-entreprise.beta.gouv.fr",
+      description:
+        "Equipe mon-entreprise, pour les discussions avec les partenaires"
     },
     {
       id: "fast",
