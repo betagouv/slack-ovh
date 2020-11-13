@@ -122,7 +122,7 @@ const config = {
     },
     {
       id: "contact@mon-entreprise.beta.gouv.fr",
-      description: "Toute demande entrante pour mon-entreprise.fr"
+      description: "Adresse de support pour les demande des usager de mon-entreprise.fr"
     },
     {
       id: "contact@openacademie.beta.gouv.fr",
@@ -187,6 +187,11 @@ const config = {
       id: "e-controle",
       description: "Liste pour les membres de la SE e-controle",
       realMailingList: true
+    },
+    {
+      id: "equipe@mon-entreprise.beta.gouv.fr",
+      description:
+        "Equipe mon-entreprise, pour les discussions avec les partenaires"
     },
     {
       id: "fast",
