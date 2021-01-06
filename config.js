@@ -323,7 +323,13 @@ const config = {
       description:
         "Equipe Solidarite FDE",
       realMailingList: true
-    }
+    },
+    {
+      id: "jeveuxaider",
+      description:
+        "Équipe JeVeuxAider",
+      realMailingList: true
+    },
   ]
 };
 
