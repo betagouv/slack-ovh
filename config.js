@@ -177,6 +177,12 @@ const config = {
         "Equipe de designers transverses",
       realMailingList: true
     },
+     {
+      id: "designers",
+      description:
+        "Liste des designers de beta.gouv",
+      realMailingList: true
+    },
     {
       id: "dinum",
       description:
