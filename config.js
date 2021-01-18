@@ -63,6 +63,11 @@ const config = {
       realMailingList: true
     },
     {
+      id: "cartobio-donnees",
+      description: "Demandes de données CartoBio",
+      realMailingList: true
+    },
+    {
       id: "coachs",
       description: "Partage d'informations des coachs",
       realMailingList: true
