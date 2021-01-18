@@ -12,8 +12,7 @@ const helpMessage = `Commandes disponibles:
   \t- \`/emails join id_de_la_liste email_a_ajouter@domain.com\`\tinscrire email_a_ajouter@domain.com à la liste email_de_la_liste@domain.com
   \t- \`/emails leave id_de_la_liste email_a_ajouter@domain.com\`\tenlever email_a_ajouter@domain.com de la liste email_de_la_liste@domain.com
 
-  Vous pouvez ajoutez votre liste ici 👉 https://github.com/betagouv/slack-ovh/blob/master/config.js
-  Plus d'infos sur https://github.com/betagouv/slack-ovh`;
+  Pour lire comment ajouter une nouvelle liste, c'est ici 👉 https://doc.incubateur.net/communaute/outils/liste-de-diffusion-et-adresses-de-contact#la-commande-slack-emails`;
 
 const redirections = config.lists.reduce((acc, current) => {
   if (!current.realMailingList) {
