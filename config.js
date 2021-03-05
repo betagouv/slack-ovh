@@ -221,6 +221,12 @@ const config = {
       realMailingList: true
     },
     {
+      id: "jeveuxaider",
+      description:
+        "Équipe JeVeuxAider",
+      realMailingList: true
+    },
+    {
       id: "lapins",
       description: "Liste pour les membres de la Startup d'État Lapins",
       realMailingList: true
@@ -312,13 +318,7 @@ const config = {
       description:
         "Equipe Solidarite FDE",
       realMailingList: true
-    },
-    {
-      id: "jeveuxaider",
-      description:
-        "Équipe JeVeuxAider",
-      realMailingList: true
-    },
+    }
   ]
 };
 
