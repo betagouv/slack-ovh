@@ -330,6 +330,12 @@ const config = {
         "Equipe Solidarite FDE",
       realMailingList: true
     }
+    {
+      id: "tutorat",
+      description:
+        "Equipe tutorat.fonction-publique.gouv.fr",
+      realMailingList: true
+    }
   ]
 };
 
