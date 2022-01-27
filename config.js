@@ -152,10 +152,6 @@ const config = {
       description: "Liste des redirections sur contact@signalement.beta.gouv.fr"
     },
     {
-      id: "contact@transport.beta.gouv.fr",
-      description: "Liste des redirections sur transport.beta.gouv.fr"
-    },
-    {
       id: "contact@tremplin.beta.gouv.fr",
       description: "L'équipe Tremplin"
     },
@@ -171,11 +167,7 @@ const config = {
     {
       id: "contact@zam.beta.gouv.fr",
       description: "Toute demande entrante pour Zam"
-    },
-    {
-      id: "deploiement@transport.beta.gouv.fr",
-      description: "Liste pour les bizdev transport.data.gouv.fr "
-    },   
+    },  
     {
       id: "design",
       description:
