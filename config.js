@@ -331,6 +331,12 @@ const config = {
       realMailingList: true
     },
     {
+      id: "sparte",
+      description:
+        "Equipe SPARTE",
+      realMailingList: true
+    },
+    {
       id: "tutorat",
       description:
         "Equipe tutorat.fonction-publique.gouv.fr",
