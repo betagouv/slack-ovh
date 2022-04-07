@@ -137,6 +137,26 @@ function help(res) {
   return res.send(messages.ephemeral(helpMessage));
 }
 
+function create(res, name, ownerEmail) {
+  let createPromise;
+
+  // Subscribe from mailing-list
+  createPromise = ovh
+    .requestPromised(
+      "POST",
+      `/email/domain/${config.domain}/mailingList/${mailingList}`,
+      { name, ownerEmail, options:null }
+    )
+    .catch(err => printAndReturnError(err, res));
+
+  const successText = `Creation de *${name}* réussie.`;
+
+  return createPromise
+    .then(() => res.send(messages.inChannel(successText)))
+    .catch(err => printAndReturnError(err, res));
+}
+
+
 function join(res, mailingList, email) {
   let subscribePromise;
 
