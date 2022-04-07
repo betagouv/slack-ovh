@@ -145,7 +145,7 @@ function create(res, name, ownerEmail) {
   createPromise = ovh
     .requestPromised(
       "POST",
-      `/email/domain/${config.domain}/mailingList/${mailingList}`,
+      `/email/domain/${config.domain}/mailingList`,
       { name, ownerEmail, options:null }
     )
     .catch(err => printAndReturnError(err, res));
