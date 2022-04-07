@@ -146,7 +146,11 @@ function create(res, name, ownerEmail) {
     .requestPromised(
       "POST",
       `/email/domain/${config.domain}/mailingList`,
-      { name, ownerEmail, language: 'fr' }
+      { name, ownerEmail, language: 'fr', options:{
+          "moderatorMessage": false,
+          "subscribeByModerator": false,
+          "usersPostOnly": false
+      }}
     )
     .catch(err => printAndReturnError(err, res));
 
