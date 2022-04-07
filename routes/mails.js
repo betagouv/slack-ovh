@@ -146,7 +146,7 @@ function create(res, name, ownerEmail) {
     .requestPromised(
       "POST",
       `/email/domain/${config.domain}/mailingList`,
-      { name, ownerEmail, options:undefined }
+      { name, ownerEmail, options:undefined, language: 'fr' }
     )
     .catch(err => printAndReturnError(err, res));
 
