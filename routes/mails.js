@@ -232,8 +232,8 @@ router.post("/", verification, function(req, res, next) {
     .trim()
     .split(" ");
     
-  let access_control = process.env.ACCESS_CONTROLS ? JSON.parse(process.env.ACCESS_CONTROLS) : {}
-  if (access_control['list'][mailingList]) {
+  let access_control = process.env.ACCESS_CONTROLS ? JSON.parse(process.env.ACCESS_CONTROLS) : null
+  if (access_control && access_control['list'][mailingList]) {
       let list_access = access_control['list'][mailingList]
       if (list_access.allowusers && !list_access.allowusers.includes(req.body.user_name)) {
           printAndReturnError(new Error('Utilisateur non autorisé sur cette mailing liste'), res)
