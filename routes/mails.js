@@ -225,7 +225,7 @@ router.post("/", verification, function(req, res, next) {
   if (!req.body || !req.body.text) {
     return help(res);
   }
-  console.log(JSON.stringify(req.body.text))
+  console.log(JSON.stringify(req.body))
   console.log("Received command: " + req.body.text);
   let [cmd, mailingList, email] = req.body.text
     .replace(/\s\s+/g, " ")
