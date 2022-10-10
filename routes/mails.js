@@ -236,9 +236,7 @@ router.post("/", verification, function(req, res, next) {
   if (access_control && mailingList && access_control['lists'][mailingList]) {
       let list_access = access_control['lists'][mailingList]
       if (list_access.allowusers && !list_access.allowusers.includes(req.body.user_name)) {
-          return printAndReturnError(new Error('Non Alllowed',{
-            err: 'Utilisateur non autorisé sur cette mailing liste'
-          }), res)
+          return printAndReturnError('Utilisateur non autorisé sur cette mailing liste', res)
       }
   }
 
