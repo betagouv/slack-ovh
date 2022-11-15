@@ -10,9 +10,9 @@ const helpMessage = `Commandes disponibles:
   \t- \`/emails list\`\t\tensemble des listes de diffusions existantes
   \t- \`/emails list id_de_la_liste\`\t\tpersonnes inscrites dans la liste email_de_la_liste@domain.com
   \t- \`/emails join id_de_la_liste email_a_ajouter@domain.com\`\tinscrire email_a_ajouter@domain.com à la liste email_de_la_liste@domain.com
-  \t- \`/emails leave id_de_la_liste email_a_ajouter@domain.com\`\tenlever email_a_ajouter@domain.com de la liste email_de_la_liste@domain.com
-
-  Pour lire comment ajouter une nouvelle liste, c'est ici 👉 https://doc.incubateur.net/communaute/travailler-a-beta-gouv/jutilise-les-outils-de-la-communaute/outils/liste-de-diffusion-et-adresses-de-contact#comment-creer-une-nouvelle-liste-de-diffusion-pour-la-communaute`;
+  \t- \`/emails leave id_de_la_liste email_a_ajouter@domain.com\`\tenlever email_a_ajouter@domain.com de la liste email_de_la_liste@domain.com  
+  
+  Pour lire comment ajouter une nouvelle liste, c'est ici 👉 https://doc.incubateur.net/communaute/outils/liste-de-diffusion-et-adresses-de-contact#la-commande-slack-emails`;
 
 const redirections = config.lists.reduce((acc, current) => {
   if (!current.realMailingList) {
@@ -137,6 +137,30 @@ function help(res) {
   return res.send(messages.ephemeral(helpMessage));
 }
 
+function create(res, name, ownerEmail) {
+  let createPromise;
+
+  // Subscribe from mailing-list
+  createPromise = ovh
+    .requestPromised(
+      "POST",
+      `/email/domain/${config.domain}/mailingList`,
+      { name, ownerEmail, language: 'fr', options:{
+          "moderatorMessage": false,
+          "subscribeByModerator": false,
+          "usersPostOnly": false
+      }}
+    )
+    .catch(err => printAndReturnError(err, res));
+
+  const successText = `Creation de *${name}* réussie.`;
+
+  return createPromise
+    .then(() => res.send(messages.inChannel(successText)))
+    .catch(err => printAndReturnError(err, res));
+}
+
+
 function join(res, mailingList, email) {
   let subscribePromise;
 
@@ -197,15 +221,23 @@ function leave(res, mailingList, email) {
 }
 
 router.post("/", verification, function(req, res, next) {
+  console.info(JSON.stringify(req.body))
   if (!req.body || !req.body.text) {
     return help(res);
   }
-
   console.log("Received command: " + req.body.text);
   let [cmd, mailingList, email] = req.body.text
     .replace(/\s\s+/g, " ")
     .trim()
     .split(" ");
+    
+  let access_control = process.env.ACCESS_CONTROLS ? JSON.parse(process.env.ACCESS_CONTROLS) : null
+  if (access_control && mailingList && access_control['lists'][mailingList]) {
+      let list_access = access_control['lists'][mailingList]
+      if (list_access.allowusers && !list_access.allowusers.includes(req.body.user_name)) {
+          return printAndReturnError('Utilisateur non autorisé sur cette mailing liste', res)
+      }
+  }
 
   switch (cmd) {
     case "join":
@@ -214,6 +246,9 @@ router.post("/", verification, function(req, res, next) {
     case "leave":
       console.log("Interpreted command as `leave`");
       return leave(res, mailingList, email);
+    case "create":
+      console.log("Interpreted command as `create`");
+      return create(res, mailingList, email);
     case "list":
       console.log("Interpreted command as `list`");
       return list(res, mailingList);
