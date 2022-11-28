@@ -48,7 +48,7 @@ function buildLongDescription(list) {
 function getMailingLists() {
   return ovh
     .requestPromised("GET", `/email/domain/${config.domain}/mailingList`)
-    .then(list => list.filter(l => !l.startsWith('startup-info-')).concat(redirections))
+    .then(list => list.filter(l => !l.startsWith('set-')).concat(redirections))
     .then(buildLongDescription)
     .catch(printAndReturnError);
 }
