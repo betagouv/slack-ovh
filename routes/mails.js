@@ -139,7 +139,7 @@ function help(res) {
 
 function create(res, name, ownerEmail) {
   let createPromise;
-
+  name = name.split('@')[0] // if someone give the adress instead of the name
   // Subscribe from mailing-list
   createPromise = ovh
     .requestPromised(
