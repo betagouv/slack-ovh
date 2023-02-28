@@ -258,6 +258,7 @@ router.post("/", verification, function(req, res, next) {
   
   if (access_control && access_control['cmd']) {
       let cmd_access = access_control['cmd'][cmd]
+      console.log(cmd, cmd_access, access_control['cmd']) 
       if (cmd_access && cmd_access.allowusers && !cmd_access.allowusers.includes(req.body.user_name)) {
           return printAndReturnError('Utilisateur non autorisé sur cette commande', res)
       }
