@@ -171,7 +171,7 @@ function del(res, mailingList) {
     )
     .catch(err => printAndReturnError(err, res));
 
-  const successText = `Suppresion de *${name}* réussie.`;
+  const successText = `Suppresion de *${mailingList}* réussie.`;
 
   return deletePromise
     .then(() => res.send(messages.inChannel(successText)))
