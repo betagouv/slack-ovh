@@ -160,6 +160,23 @@ function create(res, name, ownerEmail) {
     .catch(err => printAndReturnError(err, res));
 }
 
+function del(res, mailingList) {
+  let deletePromise;
+  mailingList = mailingList.split('@')[0] // if someone give the adress instead of the name
+  // Subscribe from mailing-list
+  deletePromise = ovh
+    .requestPromised(
+      "DELETE",
+      `/email/domain/${config.domain}/mailingList/${mailingList}`
+    )
+    .catch(err => printAndReturnError(err, res));
+
+  const successText = `Suppresion de *${name}* réussie.`;
+
+  return deletePromise
+    .then(() => res.send(messages.inChannel(successText)))
+    .catch(err => printAndReturnError(err, res));
+}
 
 function join(res, mailingList, email) {
   let subscribePromise;
@@ -238,6 +255,13 @@ router.post("/", verification, function(req, res, next) {
           return printAndReturnError('Utilisateur non autorisé sur cette mailing liste', res)
       }
   }
+  
+  if (access_control && access_control['cmd']) {
+      let cmd_access = access_control['cmd'][cmd]
+      if (cmd_access.allowusers && !cmd_access.allowusers.includes(req.body.user_name)) {
+          return printAndReturnError('Utilisateur non autorisé sur cette commande', res)
+      }
+  }
 
   switch (cmd) {
     case "join":
@@ -252,6 +276,9 @@ router.post("/", verification, function(req, res, next) {
     case "list":
       console.log("Interpreted command as `list`");
       return list(res, mailingList);
+    case "delete":
+      console.log("Interpreted command as `delete`");
+      return del(res, mailingList);
     default:
       console.log("Command unknown, returning help");
       return help(res);
