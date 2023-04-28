@@ -6,7 +6,7 @@ const config = {
     consumerKey: process.env.OVH_CONSUMER_KEY
   },
   domain: process.env.DOMAIN,
-  slackChannel: "incubateur-secretaria",
+  slackChannel: "incubateur-secretariat",
   lists: [
     {
       id: "acceslibre",
@@ -167,7 +167,7 @@ const config = {
     {
       id: "contact@zam.beta.gouv.fr",
       description: "Toute demande entrante pour Zam"
-    },  
+    },
     {
       id: "design",
       description:
