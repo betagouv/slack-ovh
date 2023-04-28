@@ -9,7 +9,7 @@ function verification(req, res, next) {
         text:
           "Veuillez effectuer cette commande dans le channel " + slackChannel,
         mrkdwn: true,
-        response_type: "ephemeral"
+        response_type: "ephemeral",
       })
       .status(401);
   }
