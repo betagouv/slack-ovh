@@ -239,6 +239,7 @@ function leave(res, mailingList, email) {
 }
 
 router.post("/", verification, function (req, res, next) {
+  console.log("POST")
   console.info(JSON.stringify(req.body));
   if (!req.body || !req.body.text) {
     return help(res);
