@@ -71,6 +71,10 @@ const config = {
       realMailingList: true,
     },
     {
+      id: "collectifobjets",
+      description: "Equipe Collectif Objets",
+    },
+    {
       id: "compta",
       description: "Achats, facturation, refacturation...",
       realMailingList: true,
