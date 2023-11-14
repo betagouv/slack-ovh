@@ -41,6 +41,11 @@ const config = {
       realMailingList: true,
     },
     {
+      id: "authentification",
+      description: "Equipe de https://www.authentification.beta.gouv.fr",
+      realMailingList: true,
+    },
+    {
       id: "biodiversite",
       description: "Equipe Biodiversite",
       realMailingList: true,
