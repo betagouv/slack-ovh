@@ -219,6 +219,11 @@ const config = {
       realMailingList: true,
     },
     {
+      id: "je-deviens-etudiant",
+      description: "Équipe JeDeviensÉtudiant",
+      realMailingList: true,
+    },
+    {
       id: "lapins",
       description: "Liste pour les membres de la Startup d'État Lapins",
       realMailingList: true,
