@@ -172,6 +172,11 @@ const config = {
       realMailingList: true,
     },
     {
+      id: "dialog",
+      description: "Pour toutes demandes au sujet de DiaLog",
+      realMailingList: true,
+    },
+    {
       id: "dinum",
       description:
         "Rares éléments administratifs nécessitant un lien contractuel (fiches de paie, gestion des ordres de mission…).",
