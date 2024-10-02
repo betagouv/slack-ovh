@@ -6,6 +6,20 @@ const Promise = require("bluebird");
 const verification = require("../middlewares/slack");
 const messages = require("../lib/messages");
 
+// Helper function to extract mailing list name
+function extractMailingListName(mailingList) {
+  if (mailingList.includes("@")) {
+    return mailingList.split("@")[0]; // Extracts the part before the '@'
+  }
+  return mailingList; // Returns the mailing list as is if it doesn't contain '@'
+}
+
+// Helper function to extract email address
+function extractEmail(email) {
+  const match = email.match(/<([^>]+)>|([\w.-]+@[\w.-]+)/);
+  return match ? match[1] || match[2] : email; // Returns the extracted email or the original if not found
+}
+
 const helpMessage = `Commandes disponibles:
   \t- \`/emails list\`\t\tensemble des listes de diffusions existantes
   \t- \`/emails list id_de_la_liste\`\t\tpersonnes inscrites dans la liste email_de_la_liste@domain.com
@@ -65,7 +79,7 @@ function getSubscribers(mailingList) {
       })
       .catch(printAndReturnError);
   }
-
+  mailingList = extractMailingListName(mailingList);
   return ovh
     .requestPromised(
       "GET",
@@ -142,12 +156,14 @@ function help(res) {
 function create(res, name, ownerEmail) {
   let createPromise;
   name = name.split("@")[0]; // if someone give the adress instead of the name
+  ownerEmail = extractEmail(ownerEmail);
   // Subscribe from mailing-list
   createPromise = ovh
     .requestPromised("POST", `/email/domain/${config.domain}/mailingList`, {
       name,
       ownerEmail,
       language: "fr",
+      replyTo: "lastuser",
       options: {
         moderatorMessage: false,
         subscribeByModerator: false,
@@ -183,6 +199,7 @@ function del(res, mailingList) {
 
 function join(res, mailingList, email) {
   let subscribePromise;
+  email = extractEmail(email);
 
   const isSpecial = redirections.find((item) => item === mailingList);
   if (isSpecial) {
@@ -199,6 +216,7 @@ function join(res, mailingList, email) {
       .catch((err) => res.send(messages.error(err)));
   } else {
     // Subscribe from mailing-list
+    mailingList = extractMailingListName(mailingList);
     subscribePromise = ovh
       .requestPromised(
         "POST",
@@ -217,7 +235,7 @@ function join(res, mailingList, email) {
 
 function leave(res, mailingList, email) {
   let leavePromise;
-
+  email = extractEmail(email);
   if (redirections.indexOf(mailingList) >= 0) {
     // Remove redirection
     leavePromise = getRedirections(mailingList)
@@ -225,6 +243,7 @@ function leave(res, mailingList, email) {
       .then(removeRedirection);
   } else {
     // Unsubscribe from mailing-list
+    mailingList = extractMailingListName(mailingList);
     leavePromise = ovh.requestPromised(
       "DELETE",
       `/email/domain/${config.domain}/mailingList/${mailingList}/subscriber/${email}`
@@ -239,7 +258,6 @@ function leave(res, mailingList, email) {
 }
 
 router.post("/", verification, function (req, res, next) {
-  console.log("POST")
   console.info(JSON.stringify(req.body));
   if (!req.body || !req.body.text) {
     return help(res);
