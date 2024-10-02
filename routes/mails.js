@@ -9,7 +9,7 @@ const messages = require("../lib/messages");
 // Helper function to extract mailing list name
 function extractMailingListName(mailingList) {
   if (mailingList.includes("@")) {
-    return mailingList.split("@'"[0]; // Extracts the part before the '@'
+    return mailingList.split("@")[0]; // Extracts the part before the '@'
   }
   return mailingList; // Returns the mailing list as is if it doesn't contain '@'
 }
