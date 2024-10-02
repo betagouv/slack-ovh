@@ -163,6 +163,7 @@ function create(res, name, ownerEmail) {
       name,
       ownerEmail,
       language: "fr",
+      replyTo: "lastuser",
       options: {
         moderatorMessage: false,
         subscribeByModerator: false,
