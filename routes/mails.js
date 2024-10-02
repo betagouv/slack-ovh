@@ -215,7 +215,7 @@ function join(res, mailingList, email) {
       .catch((err) => res.send(messages.error(err)));
   } else {
     // Subscribe from mailing-list
-    mailingList = extractMailingListName(mailingList)
+    mailingList = extractMailingListName(mailingList);
     subscribePromise = ovh
       .requestPromised(
         "POST",
