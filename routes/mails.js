@@ -242,6 +242,7 @@ function leave(res, mailingList, email) {
       .then(removeRedirection);
   } else {
     // Unsubscribe from mailing-list
+    mailingList = extractMailingListName(mailingList)
     leavePromise = ovh.requestPromised(
       "DELETE",
       `/email/domain/${config.domain}/mailingList/${mailingList}/subscriber/${email}`
