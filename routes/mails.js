@@ -79,7 +79,7 @@ function getSubscribers(mailingList) {
       })
       .catch(printAndReturnError);
   }
-  mailingList = extractMailingListName(mailingList)
+  mailingList = extractMailingListName(mailingList);
   return ovh
     .requestPromised(
       "GET",
