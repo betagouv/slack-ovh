@@ -156,7 +156,7 @@ function help(res) {
 function create(res, name, ownerEmail) {
   let createPromise;
   name = name.split("@")[0]; // if someone give the adress instead of the name
-  ownerEmail = extractEmail(ownerEmail)
+  ownerEmail = extractEmail(ownerEmail);
   // Subscribe from mailing-list
   createPromise = ovh
     .requestPromised("POST", `/email/domain/${config.domain}/mailingList`, {
