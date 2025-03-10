@@ -122,6 +122,11 @@ const config = {
         "Adresse de support pour les demande des usager de mon-entreprise.fr",
     },
     {
+      id: "portage@mon-entreprise.beta.gouv.fr",
+      description:
+        "Pour le traitement administratif/comptable du portage des indépendants sur mon-entreprise",
+    },
+    {
       id: "contact@openacademie.beta.gouv.fr",
       description:
         "Des solutions numériques pour l’administration scolaire, openacademie.beta.gouv.fr",
