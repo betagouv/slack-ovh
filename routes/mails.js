@@ -21,12 +21,12 @@ function extractEmail(email) {
 }
 
 const helpMessage = `Commandes disponibles:
-  \t- \`/emails list\`\t\tensemble des listes de diffusions existantes
-  \t- \`/emails list id_de_la_liste\`\t\tpersonnes inscrites dans la liste email_de_la_liste@domain.com
-  \t- \`/emails join id_de_la_liste email_a_ajouter@domain.com\`\tinscrire email_a_ajouter@domain.com à la liste email_de_la_liste@domain.com
-  \t- \`/emails leave id_de_la_liste email_a_ajouter@domain.com\`\tenlever email_a_ajouter@domain.com de la liste email_de_la_liste@domain.com
+  - \`/emails list\`: ensemble des listes de diffusions existantes
+  - \`/emails list id_de_la_liste\`: personnes inscrites dans la liste email_de_la_liste@domain.com
+  - \`/emails join id_de_la_liste email_a_ajouter@domain.com\`: inscrire email_a_ajouter@domain.com à la liste email_de_la_liste@domain.com
+  - \`/emails leave id_de_la_liste email_a_ajouter@domain.com\`: enlever email_a_ajouter@domain.com de la liste email_de_la_liste@domain.com
 
-  Pour lire comment ajouter une nouvelle liste, c'est ici 👉 https://doc.incubateur.net/communaute/outils/liste-de-diffusion-et-adresses-de-contact#la-commande-slack-emails`;
+  Pour créer une nouvelle liste, faire la demande via le formulaire indiqué dans le canal 👉 [demandes ops](https://mattermost.incubateur.net/betagouv/channels/incubateur-demandes-ops)`;
 
 const redirections = config.lists.reduce((acc, current) => {
   if (!current.realMailingList) {
